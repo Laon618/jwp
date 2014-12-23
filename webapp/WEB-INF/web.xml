@@ -5,6 +5,14 @@
 	version="3.0">
 	<display-name>Web Application</display-name>
 	
+<!-- 	<filter>
+		<filter-name>EncodingFilter</filter-name>
+		<filter-class>core.web.filter.CharacterEncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+    	<filter-name>EncodingFilter</filter-name>
+    	<url-pattern>/*</url-pattern>
+	</filter-mapping> -->
 	<!-- 
 	어노테이션으로 설정을 변경하면서 주석처리함.
 	

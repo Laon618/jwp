@@ -1,4 +1,4 @@
-package next.controller;
+package core.mvc;
 
 import java.util.List;
 
@@ -7,10 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import next.dao.QuestionDao;
 import next.model.Question;
-import core.mvc.AbstractController;
-import core.mvc.ModelAndView;
 
-public class ListController extends AbstractController {
+public class JsonApiController extends AbstractController{
 	private QuestionDao questionDao = new QuestionDao();
 	
 	@Override
@@ -18,8 +16,9 @@ public class ListController extends AbstractController {
 			throws Exception {
 		List<Question> questions = questionDao.findAll();
 		
-		ModelAndView mav = jstlView("list.jsp");
+		ModelAndView mav = new ModelAndView(new JsonView());
 		mav.addObject("questions", questions);
 		return mav;
 	}
+
 }

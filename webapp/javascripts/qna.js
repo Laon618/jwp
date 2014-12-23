@@ -7,7 +7,7 @@ function writeAnswers(e) {
 	 e.preventDefault();
 	 
 	 var answerForm = e.currentTarget.form;
-	 var url = "/api/addanswer.next";
+	 var url = "/addanswer.next";
 	 var params = "questionId=" + answerForm[0].value + "&writer=" + answerForm[1].value + "&contents=" + answerForm[2].value;
 
 	 var request = new XMLHttpRequest();
